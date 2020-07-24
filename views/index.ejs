@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="css/default.css">
+    
+    <!-- javascript -->
+    <script src="js/mongoose.js"></script>
+   
+    <title>Hello Mongoose</title>
+</head>
+<body>  
+    <div>
+        <from id="user-form">
+            <fieldset>
+                <legend>사용자 등록</legend>
+                <div>
+                    <input type="text" placeholder="이름" id="username">
+                </div>
+                <div>
+                    <input type="number" placeholder="나이" id="age">
+                </div>
+                <div>
+                    <input type="checkbox" id="married">
+                    <label for="married">결혼 여부</label>
+                </div>
+                <button type="submit">등록</button>
+            </fieldset>
+        </from>
+    </div>
+    <br>
+
+    <table id="user-list">
+        <thead>
+            <tr>
+                <th>아이디</th>
+                <th>이름</th>
+                <th>나이</th>
+                <th>결혼여부</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (var user in users) { %>
+                <tr>
+                    <td><%= user._id %></td>
+                    <td><%= user.name %></td>
+                    <td><%= user.age %></td>
+                    <td><%= user.married ? '기혼' : '미혼' %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <br>
+
+     <form action="" id="comment-form">
+         <fieldset>
+             <legend>댓글 등록</legend>
+             <div>
+                 <input type="text" id="userid" placeholder="사용자 아이디">
+             </div>
+             <div>
+                 <input type="text" id="comment" placeholder="댓글">
+             </div>
+             <button action="submit">등록</button>
+         </fieldset>
+     </form>
+     <br>
+     <table id="comment-list">
+         <thead>
+             <tr>
+                 <td>아이디</td>
+                 <td>작성자</td>
+                 <td>댓글</td>
+                 <td>수정</td>
+                 <td>삭제</td>
+             </tr>
+         </thead>
+     </table>
+</body>
+</html>
