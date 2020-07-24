@@ -13,7 +13,7 @@ $ cd learn-mongoose
 
 ## Install mongoDB & mongoose
 
-### 1. Install mongoDB
+1. Install mongoDB
 ```
 // install mongoDB
 $ brew i nstall mongodb/brew
@@ -30,8 +30,7 @@ $ mongo
 > use admin
 > db.createUser({ user: 'your_name', pwd: 'your_password', roles: ['root'] });
 ```
-
-### 2. Install mongoDB
+2. Install mongoDB
 ```
 // terminal -> /learn-mongoose
 $ npm i mongoose
