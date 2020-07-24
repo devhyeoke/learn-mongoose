@@ -30,7 +30,7 @@ $ mongo
 > use admin
 > db.createUser({ user: 'your_name', pwd: 'your_password', roles: ['root'] });
 ```
-2. Install mongoDB
+2. Install mongoose
 ```
 // terminal -> /learn-mongoose
 $ npm i mongoose
